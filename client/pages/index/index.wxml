@@ -9,11 +9,25 @@
     </block>
   </swiper>
 </view>
-<view style='margin:auto' wx:for="{{btnImgUrls}}">  
-  <button class='sbtn'>
-    <image
-        src="{{item.url}}"
-        mode="aspectFit" class='sbtn-img'>
+<view style='margin:auto;margin-top:5px'>
+  <button class='sbtn' wx:for="{{naviImgs}}">
+    <image src="{{item.url}}" mode="aspectFit" class='sbtn-img'>
     </image>
   </button>
+</view>
+<view style='margin:auto'>
+  <image wx:for="{{recommImgs}}" src="{{item.url}}" mode="aspectFit" class=''>
+  </image>
+</view>
+<view style='margin:auto'>
+  <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}">
+    <image id="item_img{{item.id}}" src="{{item.url}}" mode="aspectFit" class='item-img'>
+    </image>
+    <view>
+      <label class="item-text" for="item_img{{item.id}}">
+        <text>{{item.text}}\n</text>
+        <text class='item-text-price'>¥{{item.price}}</text>
+      </label>
+    </view>
+  </view>
 </view>

@@ -1,7 +1,43 @@
+.body{
+
+  height: 90%;
+}
+
 .sbtn{
   width: 25%;
-  float: left
+  float: left;
+  border: none
 }
 .sbtn-img{
   width:50px;height:50px
+}
+
+.contain-item-left{
+  float: left;
+  width:50%;
+  margin: 0 auto;
+  text-align: center
+}
+.contain-item-right{
+  float:right;
+  width:48%;
+  margin: 0 auto;
+  text-align: center
+}
+.item-img{
+  width:48%;
+  height:100px;
+}
+.item-text{
+  display: inline-block;
+  vertical-align: middle;
+}
+.item-text-price{
+  color: red
+}
+.foot{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
 }

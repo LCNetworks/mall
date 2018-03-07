@@ -9,5 +9,36 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Wafer Quick Start",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/信封.png",
+        "iconPath": "images/信封.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/盾牌.png",
+        "iconPath": "images/盾牌.png",
+        "pagePath": "pages/index/index",
+        "text": "盾牌"
+      },
+      {
+        "selectedIconPath": "images/购物车.png",
+        "iconPath": "images/购物车.png",
+        "pagePath": "pages/index/index",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/设置.png",
+        "iconPath": "images/设置.png",
+        "pagePath": "pages/index/index",
+        "text": "设置"
+      }
+    ]
   }
 }

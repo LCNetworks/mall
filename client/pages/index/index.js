@@ -9,6 +9,7 @@ Page({
         logged: false,
         takeSession: false,
         requestResult: '',
+        //轮播图
         imgUrls: [
           {
             link: '/pages/index/index',
@@ -21,19 +22,60 @@ Page({
             url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
           }
         ],
-        btnImgUrls: [
+        //导航
+        naviImgs: [
           {
             text:'功能1',
-            url: '../images/信封.png'
+            url: '/images/信封.png'
           }, {
             text: '功能1',
-            url: '../images/盾牌.png'
+            url: '/images/盾牌.png'
           }, {
             text: '功能1',
-            url: '../images/购物车.png'
+            url: '/images/购物车.png'
           }, {
             text: '功能1',
-            url: '../images/设置.png'
+            url: '/images/设置.png'
+          }
+        ],
+        //推荐图
+        recommImgs: [
+          {
+            text: '功能1',
+            url: '/images/信封.png'
+          }, {
+            text: '功能1',
+            url: '/images/盾牌.png'
+          }, {
+            text: '功能1',
+            url: '/images/购物车.png'
+          }, {
+            text: '功能1',
+            url: '/images/设置.png'
+          }
+        ],
+        //商品图
+        itemImgs: [
+          {
+            id:1,
+            price: '78.00',
+            text: '商品1',
+            url: '/images/信封.png'
+          }, {
+            id: 2,
+            price: '43.00',
+            text: '商品2',
+            url: '/images/盾牌.png'
+          }, {
+            id: 3,
+            price: '728.00',
+            text: '商品3',
+            url: '/images/购物车.png'
+          }, {
+            id: 4,
+            price: '18.00',
+            text: '商品4',
+            url: '/images/设置.png'
           }
         ],
         indicatorDots: true,
