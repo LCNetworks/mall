@@ -21,6 +21,21 @@ Page({
             url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
           }
         ],
+        btnImgUrls: [
+          {
+            text:'功能1',
+            url: '../images/信封.png'
+          }, {
+            text: '功能1',
+            url: '../images/盾牌.png'
+          }, {
+            text: '功能1',
+            url: '../images/购物车.png'
+          }, {
+            text: '功能1',
+            url: '../images/设置.png'
+          }
+        ],
         indicatorDots: true,
         autoplay: true,
         interval: 5000,

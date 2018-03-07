@@ -9,35 +9,11 @@
     </block>
   </swiper>
 </view>
-<view style='margin:auto'>  
-  <button class='sbtn-left'>
+<view style='margin:auto' wx:for="{{btnImgUrls}}">  
+  <button class='sbtn'>
     <image
-        src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
-        mode="center" style='width:30px;height:30px'>
-    </image>立即送1
+        src="{{item.url}}"
+        mode="aspectFit" class='sbtn-img'>
+    </image>
   </button>
-  <button class='sbtn-right'>
-    <image
-        src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
-        mode="center" style='width:30px;height:30px'>
-    </image>预约送
-  </button>
-</view>
-<view style='margin:auto'> 
-  <view> 
-    <image
-        src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
-        mode="center" style='width:50%;height:200px;float:left'>
-    </image>
-  </view>
-  <view> 
-    <image
-        src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
-        mode="center" style='width:50%;height:100px;float:right'>
-    </image>
-    <image
-        src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
-        mode="center" style='width:50%;height:100px;float:right'>
-    </image>
-  </view>
 </view>
