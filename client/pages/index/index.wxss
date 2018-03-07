@@ -1,0 +1,9 @@
+.sbtn-left,.sbtn-right{
+  width: 50%
+}
+.sbtn-left{
+  float: left
+}
+.sbtn-right{
+  float: right
+}
