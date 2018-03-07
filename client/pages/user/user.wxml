@@ -1,0 +1,14 @@
+<view style='margin:auto'>
+  <view class='userinfo'>
+    <image
+        class="userinfo-avatar"
+        src="../index/user-unlogin.png"
+        background-size="cover"
+    ></image>
+  </view>
+</view>
+<view class='container'>
+  <button class='container-btn' wx:for="{{btn}}">
+    {{item.text}}
+  </button>
+</view>

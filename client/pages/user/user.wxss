@@ -1,0 +1,17 @@
+/* pages/user/user.wxss */
+.userinfo, .uploader, .tunnel {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center
+}
+
+.userinfo-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.container-btn{
+  width:100%;
+  text-align: left
+}
