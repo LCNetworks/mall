@@ -7,9 +7,6 @@ Page({
   data: {
     btn:[
       {
-        text: '陈志良'
-      },
-      {
         text: '收货地址'
       },
       {

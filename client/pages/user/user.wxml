@@ -7,7 +7,10 @@
     ></image>
   </view>
 </view>
-<view class='container'>
+<view>
+  <view class='title'>
+    <label class="username">陈志良</label><button class='regis-btn'>注册</button>
+  </view>
   <button class='container-btn' wx:for="{{btn}}">
     {{item.text}}
   </button>

@@ -1,27 +1,34 @@
+<!--轮播区-->
 <view style='width:100%;margin:auto'>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
         <navigator url="{{item.link}}" hover-class="navigator-hover">
-          <image src="{{item.url}}" class="slide-image" width="100%" height="150" />
+          <image src="{{item.url}}" class="slide-image" class='swiper-img' mode="scaleToFill" />
         </navigator>
       </swiper-item>
     </block>
   </swiper>
 </view>
+<!--导航区-->
 <view style='margin:auto;margin-top:5px'>
   <button class='sbtn' wx:for="{{naviImgs}}">
     <image src="{{item.url}}" mode="aspectFit" class='sbtn-img'>
     </image>
   </button>
 </view>
-<view style='margin:auto'>
-  <image wx:for="{{recommImgs}}" src="{{item.url}}" mode="aspectFit" class=''>
+<!--推荐区-->
+<view style='margin:auto;text-align:center'>
+  <image wx:for="{{recommImgs}}" src="{{item.url}}" mode="scaleToFill" class='recommImgs'>
   </image>
 </view>
+<!--商品区-->
 <view style='margin:auto'>
+  <view>
+    <text class='items-title'>|商品列表</text>
+  </view>
   <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}">
-    <image id="item_img{{item.id}}" src="{{item.url}}" mode="aspectFit" class='item-img'>
+    <image id="item_img{{item.id}}" src="{{item.url}}" mode="scaleToFill" class='item-img'>
     </image>
     <view>
       <label class="item-text" for="item_img{{item.id}}">
@@ -30,4 +37,12 @@
       </label>
     </view>
   </view>
+  <button class='viewAll-btn'>
+    查看全部
+  </button>
+</view>
+
+<!--底部-->
+<view class='foot'>
+  技术支持www.123.com
 </view>

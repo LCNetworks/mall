@@ -42,16 +42,16 @@ Page({
         recommImgs: [
           {
             text: '功能1',
-            url: '/images/信封.png'
+            url: '/images/focus_01.jpg'
           }, {
             text: '功能1',
-            url: '/images/盾牌.png'
+            url: '/images/focus_02.jpg'
           }, {
             text: '功能1',
-            url: '/images/购物车.png'
+            url: '/images/focus_03.jpg'
           }, {
             text: '功能1',
-            url: '/images/设置.png'
+            url: '/images/focus_03.jpg'
           }
         ],
         //商品图
@@ -60,22 +60,22 @@ Page({
             id:1,
             price: '78.00',
             text: '商品1',
-            url: '/images/信封.png'
+            url: '/images/focus_03.jpg'
           }, {
             id: 2,
             price: '43.00',
             text: '商品2',
-            url: '/images/盾牌.png'
+            url: '/images/focus_01.jpg'
           }, {
             id: 3,
             price: '728.00',
             text: '商品3',
-            url: '/images/购物车.png'
+            url: '/images/focus_02.jpg'
           }, {
             id: 4,
             price: '18.00',
             text: '商品4',
-            url: '/images/设置.png'
+            url: '/images/focus_03.jpg'
           }
         ],
         indicatorDots: true,
