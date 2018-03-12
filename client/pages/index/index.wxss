@@ -8,12 +8,18 @@
 }
 
 .sbtn{
-  width: 25%;
-  float: left;
-  border: none
+  float:left;
+  display:-webkit-flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  width:25%;
+  text-align:center;
+  margin:10rpx 0;
 }
 .sbtn-img{
-  width:50px;height:50px
+  margin:0 auto;
+  width:100rpx;
+  height:100rpx;
 }
 
 .recommImgs{

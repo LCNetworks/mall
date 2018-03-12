@@ -1,7 +1,7 @@
 <!--轮播区-->
 <view style='width:100%;margin:auto'>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="key">
       <swiper-item>
         <navigator url="{{item.link}}" hover-class="navigator-hover">
           <image src="{{item.url}}" class="slide-image" class='swiper-img' mode="scaleToFill" />
@@ -12,14 +12,15 @@
 </view>
 <!--导航区-->
 <view style='margin:auto;margin-top:5px'>
-  <button class='sbtn' wx:for="{{naviImgs}}">
+  <view class='sbtn' wx:for="{{naviImgs}}" wx:key="key">
     <image src="{{item.url}}" mode="aspectFit" class='sbtn-img'>
     </image>
-  </button>
+    <text style='font-size:13px'>{{item.text}}</text>
+  </view>
 </view>
 <!--推荐区-->
 <view style='margin:auto;text-align:center'>
-  <image wx:for="{{recommImgs}}" src="{{item.url}}" mode="scaleToFill" class='recommImgs'>
+  <image wx:for="{{recommImgs}}" wx:key="key" src="{{item.url}}" mode="scaleToFill" class='recommImgs'>
   </image>
 </view>
 <!--商品区-->
@@ -27,7 +28,7 @@
   <view>
     <text class='items-title'>|商品列表</text>
   </view>
-  <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}">
+  <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}" wx:key="key">
     <image id="item_img{{item.id}}" src="{{item.url}}" mode="scaleToFill" class='item-img'>
     </image>
     <view>

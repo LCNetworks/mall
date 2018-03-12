@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/addCgi/addCgi",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/kind/kind",
+    "pages/shopCart/shopCart"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,13 +27,13 @@
       {
         "selectedIconPath": "images/盾牌.png",
         "iconPath": "images/盾牌.png",
-        "pagePath": "pages/index/index",
-        "text": "盾牌"
+        "pagePath": "pages/kind/kind",
+        "text": "分类"
       },
       {
         "selectedIconPath": "images/购物车.png",
         "iconPath": "images/购物车.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/shopCart/shopCart",
         "text": "购物车"
       },
       {

@@ -9,9 +9,12 @@
 </view>
 <view>
   <view class='title'>
-    <label class="username">陈志良</label><button class='regis-btn'>注册</button>
+    <label class="username">陈志良</label>
+    <button class='regis-btn'>注册</button>
   </view>
   <button class='container-btn' wx:for="{{btn}}">
     {{item.text}}
+    <view class="arrow"></view>
   </button>
+  
 </view>
