@@ -78,6 +78,41 @@ Page({
     }
     ],
     _index : 1,
+    //商品图
+    itemImgs: [
+      {
+        id: 1,
+        price: '78.00',
+        text: '商品1',
+        url: '/images/focus_03.jpg'
+      }, {
+        id: 2,
+        price: '43.00',
+        text: '商品2',
+        url: '/images/focus_01.jpg'
+      }, {
+        id: 3,
+        price: '728.00',
+        text: '商品3',
+        url: '/images/focus_02.jpg'
+      }, {
+        id: 4,
+        price: '18.00',
+        text: '商品4',
+        url: '/images/focus_03.jpg'
+      },
+      {
+        id: 5,
+        price: '78.00',
+        text: '商品1',
+        url: '/images/focus_03.jpg'
+      }, {
+        id: 6,
+        price: '43.00',
+        text: '商品2',
+        url: '/images/focus_01.jpg'
+      }
+    ],
     bindPickerChange: function (e) {
       console.log('picker发送选择改变，携带值为', e.detail.value)
       

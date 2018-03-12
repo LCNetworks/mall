@@ -2,13 +2,12 @@
   <view class='search-view'>
     <view class="top">
       <view bindtap="flodMenu">
-
-        <image src="../../images/{{isFold?'btn':'btn'}}.png" style='width:25px;height:25px;' mode='scaleToFill'>
+        <image src="../../images/{{isFold?'btn':'btn'}}.png" class='menu-img' mode='scaleToFill'>
         </image>
       </view>
       <view class="serarch-content">
         <image src="/images/search-pic.png" class="search-icon" />
-        <input placeholder="请输入搜索内容" class="search-input" maxlength="30" confirm-type="搜索" bindinput='listenerSearchInput' bindconfirm='toSearch'>
+        <input placeholder="请输入搜索内容" class="search-input" maxlength="30" confirm-type="search" bindinput='listenerSearchInput' bindconfirm='toSearch'>
         </input>
         <button class='search-btn' bindtap="toSearch">搜索
         </button>
@@ -24,6 +23,22 @@
       <navigator wx:for="{{curItem}}" wx:key="key" class='item' id="{{item.id}}">
         {{item.name}}
       </navigator>
+    </view>
+  </view>
+</view>
+<!--商品区-->
+<view style='margin:auto'>
+  <view>
+    <text class='items-title'>|商品列表</text>
+  </view>
+  <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}" wx:key="key">
+    <image id="item_img{{item.id}}" src="{{item.url}}" mode="scaleToFill" class='item-img'>
+    </image>
+    <view>
+      <label class="item-text" for="item_img{{item.id}}">
+        <text>{{item.text}}\n</text>
+        <text class='item-text-price'>¥{{item.price}}</text>
+      </label>
     </view>
   </view>
 </view>
