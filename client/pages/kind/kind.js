@@ -130,20 +130,13 @@ Page({
       }
     )
   },
-  
-  
-  tap_ch: function (e) {
-    if (this.data.open) {
-      this.setData({
-        open: false
-      });
-    } else {
-      this.setData({
-        open: true
-      });
-    }
-  },  
-
+  //查看商品详情
+  viewGoods: function (e){
+    var curGood = e.currentTarget.id;
+    wx.navigateTo({
+      url: '../goodsDetail/goodsDetail',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

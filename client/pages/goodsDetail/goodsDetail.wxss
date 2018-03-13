@@ -1,0 +1,78 @@
+/* pages/goodsDetail/goodSDetail.wxss */
+
+.swiper-img{
+  width:100%;
+  text-align: center
+}
+
+.goods-main{
+  margin-left: 2%;
+  width: 96%;
+  padding-top: 10px;
+  border-bottom:1px #ccc solid;
+}
+
+.item-text{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0px 0px 10px;
+  
+}
+.item-text-price{
+  color: red;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.recommImgs{
+  width: 96%;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  text-align:center;
+  background: white;
+}
+
+.tarbar{
+  position: relative;
+  display: flex;
+  width:96%;
+  text-align:center;
+  background: white;
+  margin: auto;
+  height: 50px;
+}
+.nav-normal{
+  flex: 1.8;
+  width: 0;
+  background:gold;
+}
+.nav-cart{
+  flex: 3.8;
+  width: 0;
+  background: coral;
+}
+.nav-buy{
+  flex: 3.2;
+  width: 0;
+  background: red;
+}
+
+.tarbar button{
+  white-space: nowrap;
+}
+
+.tarbar-btn{
+  background:gold;
+}
+
+.tarbar-btn-cart{
+  background: coral;
+}
+.tarbar-btn-buy{
+  background: red;
+}
+

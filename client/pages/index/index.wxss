@@ -30,13 +30,15 @@
   float: left;
   width:50%;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
+  margin-top: 10px;
 }
 .contain-item-right{
   float:right;
   width:48%;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
+  margin-top: 10px;
 }
 
 .items-title{

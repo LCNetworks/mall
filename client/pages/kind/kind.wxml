@@ -31,8 +31,8 @@
   <view>
     <text class='items-title'>|商品列表</text>
   </view>
-  <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}" wx:key="key">
-    <image id="item_img{{item.id}}" src="{{item.url}}" mode="scaleToFill" class='item-img'>
+  <view class="{{index%2>0? 'contain-item-left':'contain-item-right'}}" wx:for="{{itemImgs}}" wx:key="key" id="item_img{{item.id}}" bindtap='viewGoods'>
+    <image src="{{item.url}}" mode="scaleToFill" class='item-img'>
     </image>
     <view>
       <label class="item-text" for="item_img{{item.id}}">
