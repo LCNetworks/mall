@@ -1,0 +1,8 @@
+/*字体*/
+.font-gray{
+  color: gray
+}
+
+.font-red{
+  color: red
+}

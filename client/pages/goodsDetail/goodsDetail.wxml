@@ -18,6 +18,21 @@
   </label>
 </view>
 
+<view class='goods-main-bot'>
+  <label class="item-text">
+    <text class="font-gray">运费</text>
+    <text class='font-red'> ¥9.00</text>
+    <label  class="goods-main-bot-text">
+      <text class="font-gray">销量</text>
+      <text class='font-red'> 1322</text>
+    </label>
+  </label>
+</view>
+
+<view class="bd-gray">
+
+</view>
+
 <!--商品推荐区-->
 <view style='margin:auto;text-align:center;margin-top:20px;'>
   <image wx:for="{{recommImgs}}" wx:key="key" src="{{item.url}}" mode="scaleToFill" class='recommImgs'>
@@ -25,18 +40,14 @@
 </view>
 <view class="footer">
   <view class="tarbar">
-    <view class='nav-normal' >
       <button class="tarbar-btn">首页</button>
-    </view>
-    <view class='nav-normal' >
+
       <button class="tarbar-btn">分类</button>
-    </view>
-    <view class='nav-cart'>
+
       <button class="tarbar-btn-cart" bindtap='showModal'>加入购物车</button>
-    </view>
-    <view class='nav-buy'>
+
       <button class="tarbar-btn-buy">立即购买</button>
-    </view>
+
   </view>
 </view>
 <view class="shopCart-hide" bindtap="hideModal" wx:if="{{showModalStatus}}">

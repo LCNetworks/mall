@@ -1,6 +1,9 @@
 /* pages/goodsDetail/goodSDetail.wxss */
+@import "../common/wxss/common.wxss";
+@import "../common/wxss/font.wxss";
+@import "../common/wxss/bg.wxss";
 
-.swiper-img{
+.swiper-img{goods-main
   width:100%;
   text-align: center
 }
@@ -10,6 +13,15 @@
   width: 96%;
   padding-top: 10px;
   border-bottom:1px #ccc solid;
+}
+
+.goods-main-bot{
+  margin-left: 2%;
+  width: 96%;
+  padding-top: 10px;
+}
+.goods-main-bot-text{
+  margin-left: 40px;
 }
 
 .item-text{
@@ -28,23 +40,6 @@
   width: 96%;
 }
 
-.footer{
-  position: fixed;
-  bottom: 0px;
-  width:100%;
-  text-align:center;
-  background: white;
-}
-
-.tarbar{
-  position: relative;
-  display: flex;
-  width:96%;
-  text-align:center;
-  background: white;
-  margin: auto;
-  height: 50px;
-}
 .nav-normal{
   flex: 1.8;
   width: 0;
@@ -62,18 +57,27 @@
 }
 
 .tarbar button{
-  white-space: nowrap;
+  white-space: pre;
+  color: white;
 }
 
 .tarbar-btn{
   background:gold;
+  border-radius:0px;
+  width: 25%;
 }
 
 .tarbar-btn-cart{
   background: coral;
+  border-radius:0px;
+  padding-left:5px;
+  padding-right:5px;
 }
 .tarbar-btn-buy{
   background: red;
+  border-radius:0px;
+  padding-left:5px;
+  padding-right:5px;
 }
 
 .shopCart-hide {

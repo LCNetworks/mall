@@ -1,0 +1,17 @@
+.footer{
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  text-align:center;
+  background: white;
+}
+
+.tarbar{
+  position: relative;
+  display: flex;
+  width:96%;
+  text-align:center;
+  background: white;
+  margin: auto;
+  height: 50px;
+}

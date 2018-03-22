@@ -1,0 +1,5 @@
+/*背景*/
+.bd-gray{
+  margin-top: 10px;
+  border-bottom:10px #EDEDED solid;
+}
