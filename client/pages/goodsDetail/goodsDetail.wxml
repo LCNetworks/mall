@@ -1,52 +1,55 @@
-<!--轮播区-->
-<view style='width:100%;margin:auto'>
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="key">
-      <swiper-item>
-        <navigator url="{{item.link}}" hover-class="navigator-hover">
-          <image src="{{item.url}}" class="slide-image" class='swiper-img' mode="scaleToFill" />
-        </navigator>
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
-<!--商品简介-->
-<view class='goods-main' >
-  <label class="item-text">
-    <text>{{curItem.text}}\n</text>
-    <text class='item-text-price'>¥{{curItem.price}}</text>
-  </label>
-</view>
-
-<view class='goods-main-bot'>
-  <label class="item-text">
-    <text class="font-gray">运费</text>
-    <text class='font-red'> ¥9.00</text>
-    <label  class="goods-main-bot-text">
-      <text class="font-gray">销量</text>
-      <text class='font-red'> 1322</text>
+<view style='padding-bottom:50px;'>
+  <!--轮播区-->
+  <view style='width:100%;margin:auto'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+          <navigator url="{{item.link}}" hover-class="navigator-hover">
+            <image src="{{item.url}}" class="slide-image" class='swiper-img' mode="scaleToFill" />
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--商品简介-->
+  <view class='goods-main'>
+    <label class="item-text">
+      <text>{{curItem.text}}\n</text>
+      <text class='item-text-price'>¥{{curItem.price}}</text>
     </label>
-  </label>
+  </view>
+
+  <view class='goods-main-bot'>
+    <label class="item-text">
+      <text class="font-gray">运费</text>
+      <text class='font-red'> ¥{{curItem.carriage}}</text>
+      <label class="goods-main-bot-text">
+        <text class="font-gray">销量</text>
+        <text class='font-red'> {{curItem.salesVolume}}</text>
+      </label>
+    </label>
+  </view>
+
+  <view class="bd-gray">
+
+  </view>
+
+  <!--商品推荐区-->
+  <view style='margin:auto;text-align:center;'>
+    <image wx:for="{{recommImgs}}" wx:key="key" src="{{item.url}}" mode="scaleToFill" class='recommImgs'>
+    </image>
+  </view>
 </view>
 
-<view class="bd-gray">
-
-</view>
-
-<!--商品推荐区-->
-<view style='margin:auto;text-align:center;margin-top:20px;'>
-  <image wx:for="{{recommImgs}}" wx:key="key" src="{{item.url}}" mode="scaleToFill" class='recommImgs'>
-  </image>
-</view>
 <view class="footer">
   <view class="tarbar">
-      <button class="tarbar-btn">首页</button>
+    <button class="tarbar-btn" bindtap='gotoMain'>首页</button>
 
-      <button class="tarbar-btn">分类</button>
+    <button class="tarbar-btn" bindtap='gotoKind'>分类</button>
 
-      <button class="tarbar-btn-cart" bindtap='showModal'>加入购物车</button>
+    <button id="addCart" class="tarbar-btn-cart" bindtap='showModal'>加入购物车</button>
 
-      <button class="tarbar-btn-buy">立即购买</button>
+    <button id="buynow" class="tarbar-btn-buy" bindtap='showModal'>立即购买</button>
 
   </view>
 </view>
@@ -54,20 +57,25 @@
 
 </view>
 <view animation="{{shopCart}}" class="shopCart" wx:if="{{showModalStatus}}">
-  <view>
-  加入购物车
+  <view style='margin-left:1%'>
+    加入购物车
     <view>
-      信息
+      <image src="{{curItem.imgurl}}" class="slide-image" class='shopCart-goods-img' mode="scaleToFill" />
     </view>
     <view style='padding-top:10px'>
-     <label class='shopCart-title'>规格/尺码/大小</label>
-      <button class="shopCart-options">默认</button>
+      <label class='shopCart-title'>规格/尺码/大小</label>
+      <view style='display:flex;'>
+        <button class="{{index==0?'shopCart-options-begin':'shopCart-options'}}" wx:for="{{curItem.size}}" wx:key="key">{{item.text}}</button>
+      </view>
     </view>
     <view>
-     <label class='shopCart-title'>颜色</label>
-      <button class="shopCart-options">默认</button>
+      <label class='shopCart-title'>颜色</label>
+      <view style='display:flex'>
+        <button class="{{index==0?'shopCart-options-begin':'shopCart-options'}}" wx:for="{{curItem.colors}}" wx:key="key">{{item.text}}</button>
+      </view>
     </view>
-    <label class='shopCart-title'>剩余:9999个</label>
-    <button class="shopCart-submit">加入购物车</button>
+    <label class='shopCart-title'>剩余:{{curItem.stock}}个</label>
   </view>
+  <button wx:if="{{iscart==true}}" class="shopCart-submit" bindtap='addShopCart'>加入购物车</button>
+  <button wx:if="{{iscart==false}}" class="shopCart-submit" bindtap='buynow'>下一步</button>
 </view>

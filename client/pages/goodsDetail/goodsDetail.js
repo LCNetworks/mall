@@ -1,4 +1,6 @@
 // pages/goodsDetail/goodSDetail.js
+var common = require('../common/js/common.js')
+var util = require('../../utils/util.js')
 var App = getApp();
 Page({
 
@@ -26,6 +28,12 @@ Page({
     curItem: {
         text: '商品1',
         price: '76.00',
+        carriage:'9.00',
+        salesVolume:'1322',
+        imgurl:"/images/focus_01.jpg",
+        size: [{ text: "默认" }, { text: "大码" }, { text: "小码" }],
+        colors: [{ text: "默认" }, { text: "蓝色" }, { text: "黄色" }],
+        stock :'9999'
     },
     //推荐图
     recommImgs: [
@@ -45,8 +53,10 @@ Page({
     ],
   },
   //购物车
-  showModal: function () {
+  showModal: function (e) {
     // 显示遮罩层
+    var iscart = true;
+    if (e.currentTarget.id == "buynow") iscart=false;
     var animation = wx.createAnimation({
       duration: 200,
       timingFunction: "linear",
@@ -56,7 +66,8 @@ Page({
     animation.translateY(300).step()
     this.setData({
       shopCart: animation.export(),
-      showModalStatus: true
+      showModalStatus: true,
+      iscart: iscart
     })
     setTimeout(function () {
       animation.translateY(0).step()
@@ -84,6 +95,20 @@ Page({
         showModalStatus: false
       })
     }.bind(this), 200)
+  },
+  gotoMain: function (){
+    common.switchTabToPage("../index/index")
+  },
+  gotoKind: function () {
+    common.switchTabToPage("../kind/kind")
+  },
+  addShopCart:function(){
+    util.showSuccess("添加成功!")
+    this.hideModal();
+  },
+  buynow: function () {
+    util.showSuccess("购物成功!")
+    this.hideModal();
   },
   /**
    * 生命周期函数--监听页面加载

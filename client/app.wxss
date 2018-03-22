@@ -5,3 +5,9 @@
   align-items: center;
   box-sizing: border-box;
 } 
+
+page{
+  margin: auto;
+  margin-left: 1%;
+  width: 98%;
+}

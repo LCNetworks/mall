@@ -3,21 +3,19 @@
 @import "../common/wxss/font.wxss";
 @import "../common/wxss/bg.wxss";
 
-.swiper-img{goods-main
+.swiper-img{
   width:100%;
   text-align: center
 }
 
 .goods-main{
-  margin-left: 2%;
-  width: 96%;
+  width: 100%;
   padding-top: 10px;
   border-bottom:1px #ccc solid;
 }
 
 .goods-main-bot{
-  margin-left: 2%;
-  width: 96%;
+  width: 100%;
   padding-top: 10px;
 }
 .goods-main-bot-text{
@@ -37,7 +35,7 @@
 }
 
 .recommImgs{
-  width: 96%;
+  width: 100%;
 }
 
 .nav-normal{
@@ -58,26 +56,34 @@
 
 .tarbar button{
   white-space: pre;
-  color: white;
 }
 
 .tarbar-btn{
   background:gold;
   border-radius:0px;
-  width: 25%;
+  width: 15%;
+  padding-left:5px;
+  padding-right:5px;
+  color: black;
+  background-color: white;
+  border: none ;
 }
 
 .tarbar-btn-cart{
+  width: 38%;
   background: coral;
   border-radius:0px;
   padding-left:5px;
   padding-right:5px;
+  color: white;
 }
 .tarbar-btn-buy{
+  width: 32%;
   background: red;
   border-radius:0px;
   padding-left:5px;
   padding-right:5px;
+  color: white;
 }
 
 .shopCart-hide {
@@ -95,6 +101,7 @@
 
 .shopCart{
   width: 100%;
+  margin: auto;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -106,7 +113,14 @@
 .shopCart-title{
   padding-bottom:10px;
 }
-.shopCart-options{
+
+.shopCart-goods-img{
+  width: 100px;
+  height: 60px;
+  margin: auto
+}
+
+.shopCart-options-begin{
   width:50px;
   height:25px;
   font-size:12px;
@@ -117,7 +131,21 @@
   padding-right:0px;
   margin: 0;
 }
+
+.shopCart-options{
+  width:50px;
+  height:25px;
+  font-size:12px;
+  line-height:25px;
+  background-color: red;
+  color:white;
+  padding-left:0px;
+  padding-right:0px;
+  margin: 0;
+  margin-left:5px;
+}
 .shopCart-submit{
   background-color: red;
   color:white;
 }
+
