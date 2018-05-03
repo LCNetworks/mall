@@ -289,5 +289,16 @@ Page({
         }
         util.showBusy('信道连接中...')
         this.setData({ tunnelStatus: 'closed' })
-    }
+    },
+    /**
+   * 生命周期函数--监听页面加载
+   */
+    onLoad: function (options) {
+      wx.request({
+        url: config.service.server +"/simple/gps/hello",
+        success: function (res) {
+          console.log(res.data);
+        }
+      })
+    },
 })

@@ -4,13 +4,15 @@
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
 var host = 'https://123456.qcloud.la';
+//本地调试
+var server = 'http://127.0.0.1:8090';
 
 var config = {
 
     // 下面的地址配合云端 Demo 工作
     service: {
         host,
-
+        server,
         // 登录地址，用于建立会话
         loginUrl: `${host}/weapp/login`,
 
